@@ -1,0 +1,48 @@
+{
+  "name": "@leipert/node-red-contrib-stock-ticker",
+  "version": "2.0.1",
+  "description": "node-red node(s) to get realtime stock information",
+  "keywords": [
+    "node-red",
+    "finance",
+    "stocks",
+    "stock-ticker"
+  ],
+  "author": "Lukas Eipert <git@leipert.io>",
+  "homepage": "https://gitlab.com/leipert-projects/npm-packages#readme",
+  "license": "MIT",
+  "files": [
+    "lib",
+    "nodes"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://gitlab.com/leipert-projects/npm-packages.git",
+    "directory": "packages/node-red-contrib-stock-ticker"
+  },
+  "scripts": {
+    "test": "echo \"Error: run tests from root\" && exit 1"
+  },
+  "bugs": {
+    "url": "https://gitlab.com/leipert-projects/npm-packages/issues"
+  },
+  "engines": {
+    "node": ">= 12.0.0"
+  },
+  "dependencies": {
+    "protobufjs": "^7.2.4",
+    "stocksocket": "^2.1.2",
+    "ws": "^8.13.0",
+    "yahoo-finance2": "^2.11.3"
+  },
+  "node-red": {
+    "version": ">=2.0.0",
+    "nodes": {
+      "stock request": "nodes/stock-request/stock-request.js",
+      "stock ticker": "nodes/stock-ticker/stock-ticker.js"
+    }
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}
